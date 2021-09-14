@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mask_moon"
+    tools:context=".view.MainActivity">
+
+    <com.hearing.moongame.widget.MoonEatView
+        android:id="@+id/moon_eat_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/start_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/level_view"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/bg_normal_btn"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/moon_eat_view"
+        tools:text="关卡" />
+
+    <TextView
+        android:id="@+id/start_view"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginHorizontal="30dp"
+        android:background="@drawable/bg_beauty_btn"
+        android:gravity="center"
+        android:text="@string/start_game"
+        app:layout_constraintEnd_toStartOf="@+id/ddl_view"
+        app:layout_constraintStart_toEndOf="@+id/level_view"
+        app:layout_constraintTop_toBottomOf="@+id/moon_eat_view" />
+
+    <com.hearing.moongame.widget.CountDownView
+        android:id="@+id/ddl_view"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bg_normal_btn"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/moon_eat_view"
+        tools:text="倒计时" />
+
+    <LinearLayout
+        android:id="@+id/banner_layout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="16dp"
+        android:background="@drawable/bg_banner"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        app:layout_constraintBottom_toTopOf="@+id/operate_layout"
+        app:layout_constraintTop_toBottomOf="@+id/start_view">
+
+        <com.hearing.moongame.banner.ScrollTextView
+            android:id="@+id/banner_view"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.8"
+            android:gravity="center_horizontal"
+            android:paddingHorizontal="20dp" />
+
+        <ImageView
+            android:id="@+id/go_banner"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.2"
+            android:src="@drawable/go_banner" />
+    </LinearLayout>
+
+    <com.hearing.moongame.widget.OperateLayout
+        android:id="@+id/operate_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/banner_layout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

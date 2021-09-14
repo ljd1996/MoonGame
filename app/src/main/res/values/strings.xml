@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">守护月饼</string>
+    <string name="moon">月饼</string>
+    <string name="start_game">开始游戏</string>
+    <string name="toast_start_game">游戏开始</string>
+    <string name="toast_pass_game">恭喜！月饼还有剩呢~</string>
+    <string name="toast_fail_game">可惜！月饼被吃掉喽~</string>
+    <string name="current_level">当前第%d关</string>
+    <string name="full_level">已通关</string>
+    <string name="gift">《神秘奖品》</string>
+    <string name="operate_tip">此处有老鼠🐭🐭🐭出没哦~</string>
+</resources>

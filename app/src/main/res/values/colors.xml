@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="mask_moon">#E9E9E9</color>
+    <!--  月饼颜色  -->
+    <color name="moon_color_1">#FF9900</color>
+    <color name="moon_color_2">#00CC00</color>
+    <color name="moon_color_3">#000000</color>
+    <color name="moon_color_4">#CC0000</color>
+</resources>
